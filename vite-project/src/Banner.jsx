@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./Banner.css";
+import "./banner.css";
 import axios from "./axios";
-import requests from "./requests";
+import Requests from "./Requste";
+
 const Banner = () => {
 	const [movie, setMovie] = useState([]);
 	useEffect(() => {
 		async function fetchData() {
-			const request = await axios.get(requests.fetchNetflixOriginals);
+			const request = await axios.get(Requests.fetchNetflixOriginals);
 			setMovie(
 				request.data.results[
 					Math.floor(Math.random() * request.data.results.length)
