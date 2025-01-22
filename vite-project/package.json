@@ -1,10 +1,13 @@
 {
-  "name": "vite-project",
+  "homepage": "https://mickiyas-b.github.io/Netflix-Replica/",
+  "name": "Netflix-vite-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
+    "deploy": "gt-pages -d build",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
